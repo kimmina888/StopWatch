@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Title = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,7 @@
             this.Start = new System.Windows.Forms.Button();
             this.tb = new System.Windows.Forms.Label();
             this.printtext = new System.Windows.Forms.TextBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +130,6 @@
             this.ProgressBar.Size = new System.Drawing.Size(100, 16);
             this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.ProgressBar.Tag = "ProgressBar";
-            this.ProgressBar.Value = 100;
             // 
             // Start
             // 
@@ -163,6 +164,11 @@
             this.printtext.ReadOnly = true;
             this.printtext.Size = new System.Drawing.Size(197, 25);
             this.printtext.TabIndex = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
@@ -202,6 +208,7 @@
         private System.Windows.Forms.TextBox printtext;
         private System.Windows.Forms.ToolStripMenuItem 초기화ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

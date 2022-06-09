@@ -40,6 +40,24 @@ namespace StopWatch
             btn.Text = "또 눌러?";
             printtext.Text += "*";
             tb.Text += "*";
+            if(timer1.Enabled  == false)
+            {
+                timer1.Enabled = true;
+            }
+            else
+            {
+                timer1.Enabled = false;
+            }
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            elapasedTime++;
+            printtext.Text = elapasedTime + "초 경과";
+            tb.Text = elapasedTime + "초 경과";
+            ProgressBar.Value = elapasedTime;
+        }
+
+        private int elapasedTime = 0;
     }
 }
