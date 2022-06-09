@@ -31,15 +31,15 @@
             this.Title = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.파일ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.도움말ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.stat = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.Start = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.초기화ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.끝내기ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -78,6 +78,18 @@
             this.파일ToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.파일ToolStripMenuItem.Text = "파일";
             // 
+            // 초기화ToolStripMenuItem
+            // 
+            this.초기화ToolStripMenuItem.Name = "초기화ToolStripMenuItem";
+            this.초기화ToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
+            this.초기화ToolStripMenuItem.Text = "초기화";
+            // 
+            // 끝내기ToolStripMenuItem
+            // 
+            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
+            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(130, 26);
+            this.끝내기ToolStripMenuItem.Text = "끝내기";
+            // 
             // 도움말ToolStripMenuItem
             // 
             this.도움말ToolStripMenuItem.Font = new System.Drawing.Font("카페24 심플해", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -91,29 +103,31 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stat,
             this.ProgressBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 427);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 424);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(388, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(388, 26);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
+            // stat
+            // 
+            this.stat.Font = new System.Drawing.Font("카페24 심플해", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.stat.Name = "stat";
+            this.stat.Size = new System.Drawing.Size(115, 18);
+            this.stat.Tag = "stat";
+            this.stat.Text = "오늘도 좋은 하루";
+            this.stat.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
             // ProgressBar
             // 
+            this.ProgressBar.AutoToolTip = true;
             this.ProgressBar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(5);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(100, 16);
             this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.ProgressBar.Tag = "ProgressBar";
-            // 
-            // stat
-            // 
-            this.stat.Font = new System.Drawing.Font("카페24 심플해", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.stat.Name = "stat";
-            this.stat.Size = new System.Drawing.Size(115, 17);
-            this.stat.Tag = "stat";
-            this.stat.Text = "오늘도 좋은 하루";
-            this.stat.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
             // 
             // Start
             // 
@@ -127,15 +141,17 @@
             this.Start.Tag = "Start";
             this.Start.Text = "시작";
             this.Start.UseVisualStyleBackColor = false;
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("카페24 심플해", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label1.Location = new System.Drawing.Point(98, 298);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 15);
+            this.label1.Size = new System.Drawing.Size(35, 15);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "출력";
             // 
             // textBox1
             // 
@@ -145,18 +161,6 @@
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(197, 25);
             this.textBox1.TabIndex = 5;
-            // 
-            // 초기화ToolStripMenuItem
-            // 
-            this.초기화ToolStripMenuItem.Name = "초기화ToolStripMenuItem";
-            this.초기화ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.초기화ToolStripMenuItem.Text = "초기화";
-            // 
-            // 끝내기ToolStripMenuItem
-            // 
-            this.끝내기ToolStripMenuItem.Name = "끝내기ToolStripMenuItem";
-            this.끝내기ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.끝내기ToolStripMenuItem.Text = "끝내기";
             // 
             // Form1
             // 
@@ -172,7 +176,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "STOPWATCH";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
