@@ -34,7 +34,12 @@ namespace StopWatch
 
         private void Start_Click(object sender, EventArgs e)
         {
-            s
+           /* printtext.Text += "*";*/
+
+            Button btn = (Button)sender;
+            btn.Text = "또 눌러?";
+            printtext.Text += "*";
+            tb.Text += "*";
         }
     }
 }

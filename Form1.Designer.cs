@@ -38,8 +38,8 @@
             this.stat = new System.Windows.Forms.ToolStripStatusLabel();
             this.ProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.Start = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb = new System.Windows.Forms.Label();
+            this.printtext = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -114,7 +114,7 @@
             // 
             this.stat.Font = new System.Drawing.Font("카페24 심플해", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.stat.Name = "stat";
-            this.stat.Size = new System.Drawing.Size(115, 18);
+            this.stat.Size = new System.Drawing.Size(115, 20);
             this.stat.Tag = "stat";
             this.stat.Text = "오늘도 좋은 하루";
             this.stat.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
@@ -126,8 +126,9 @@
             this.ProgressBar.Margin = new System.Windows.Forms.Padding(5);
             this.ProgressBar.Name = "ProgressBar";
             this.ProgressBar.Size = new System.Drawing.Size(100, 16);
-            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.ProgressBar.Tag = "ProgressBar";
+            this.ProgressBar.Value = 100;
             // 
             // Start
             // 
@@ -143,24 +144,25 @@
             this.Start.UseVisualStyleBackColor = false;
             this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
-            // label1
+            // tb
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("카페24 심플해", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label1.Location = new System.Drawing.Point(98, 298);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 15);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "출력";
+            this.tb.AutoSize = true;
+            this.tb.Font = new System.Drawing.Font("카페24 심플해", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.tb.Location = new System.Drawing.Point(98, 298);
+            this.tb.Name = "tb";
+            this.tb.Size = new System.Drawing.Size(35, 15);
+            this.tb.TabIndex = 4;
+            this.tb.Text = "출력";
             // 
-            // textBox1
+            // printtext
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(101, 316);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(197, 25);
-            this.textBox1.TabIndex = 5;
+            this.printtext.BackColor = System.Drawing.Color.White;
+            this.printtext.Location = new System.Drawing.Point(101, 316);
+            this.printtext.Multiline = true;
+            this.printtext.Name = "printtext";
+            this.printtext.ReadOnly = true;
+            this.printtext.Size = new System.Drawing.Size(197, 25);
+            this.printtext.TabIndex = 5;
             // 
             // Form1
             // 
@@ -168,8 +170,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(388, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.printtext);
+            this.Controls.Add(this.tb);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.Title);
@@ -196,8 +198,8 @@
         private System.Windows.Forms.ToolStripStatusLabel stat;
         private System.Windows.Forms.ToolStripProgressBar ProgressBar;
         private System.Windows.Forms.Button Start;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label tb;
+        private System.Windows.Forms.TextBox printtext;
         private System.Windows.Forms.ToolStripMenuItem 초기화ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 끝내기ToolStripMenuItem;
     }
